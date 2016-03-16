@@ -1,35 +1,78 @@
 import tweepy
-import json
-
+from tweepy import OAuthHandler
 # Authentication details. To  obtain these visit dev.twitter.com
 consumer_key = 'B0FxsKxDbCa6u2FYORxiEpILH'
 consumer_secret = 'SLppwSRdMYGcJZ0A4d2hnw7AVR7IvBd0fVc12VKAHi4VEQl8SM'
 access_token = '709884140439658496-vu3Tyk2EEa2Ewy4SrkiOgh5I0caVApg'
 access_token_secret = 'LW6nZvUmes91NuA5gvR3Qioma5suGzPLSRzIRREx7mkmh'
+auth = OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
 
-# This is the listener, resposible for receiving data
-class StdOutListener(tweepy.StreamListener):
+api = tweepy.API(auth)
+
+from tweepy import Stream
+from tweepy.streaming import StreamListener
+names = {"Trump","Hilary",""}
+class Trump(StreamListener):
+
     def on_data(self, data):
-        # Twitter returns data in JSON format - we need to decode it first
-        decoded = json.loads(data)
+        try:
 
-        # Also, we convert UTF-8 to ASCII ignoring all bad characters sent by users
-        print '@%s: %s' % (decoded['user']['screen_name'], decoded['text'].encode('ascii', 'ignore'))
-        print ''
+            with open('Trump.json'), 'a') as f:
+                f.write(data)
+                return True
+        except BaseException as e:
+            print("Error on_data: %s" % str(e))
         return True
 
     def on_error(self, status):
-        print status
+        print(status)
+        return True
+class Hilary(StreamListener):
 
-if __name__ == '__main__':
-    l = StdOutListener()
-    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-    auth.set_access_token(access_token, access_token_secret)
+    def on_data(self, data):
+        try:
 
-    print "Showing all new tweets for #programming:"
+            with open('Hilary.json'), 'a') as f:
+                f.write(data)
+                return True
+        except BaseException as e:
+            print("Error on_data: %s" % str(e))
+        return True
 
-    # There are different kinds of streams: public stream, user stream, multi-user streams
-    # In this example follow #programming tag
-    # For more details refer to https://dev.twitter.com/docs/streaming-apis
-    stream = tweepy.Stream(auth, l)
-    stream.filter(track=['Trump'])
+    def on_error(self, status):
+        print(status)
+        return True
+class Bernie(StreamListener):
+
+    def on_data(self, data):
+        try:
+
+            with open('Bernie.json'), 'a') as f:
+                f.write(data)
+                return True
+        except BaseException as e:
+            print("Error on_data: %s" % str(e))
+        return True
+
+    def on_error(self, status):
+        print(status)
+        return True
+
+class Cruz(StreamListener):
+
+    def on_data(self, data):
+        try:
+
+            with open('Cruz.json'), 'a') as f:
+                f.write(data)
+                return True
+        except BaseException as e:
+            print("Error on_data: %s" % str(e))
+        return True
+
+    def on_error(self, status):
+        print(status)
+        return True
+twitter_stream = Stream(auth, Trump())
+twitter_stream.filter(track=['#Trump', ])
