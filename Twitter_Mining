@@ -16,11 +16,12 @@ api = tweepy.API(auth)
 from tweepy import Stream
 from tweepy.streaming import StreamListener
 
-    
+
+
 class PresidentialListener(StreamListener):
     def on_data(self, data):
         try:
-            if "Sanders" in data:
+            if any(ext in data for ext in Sanders_words):
                 with open('Bernie.json', 'a') as f:
                     f.write(data)
             if "Trump" in data:
@@ -43,10 +44,14 @@ class PresidentialListener(StreamListener):
         print(status)
         return True
 
-key_words = ["Trump", "Sanders", "Clinton", "Cruz", "Kasich"]
+Trump_words = ["Trump", "thedonald", "The Donald", "makeamericagreatagain", "make america great again"]
+Sanders_words = ["Sanders", "feelthebern", "feel the bern"]
+Clinton_words = ["Hilary", "Clinton"]
+Cruz_words = ["Cruz", "trust ted", "trustted"]
+Kasich_words = ["Kasich"]
+key_words = Trump_words + Sanders_words + Clinton_words + Cruz_words + Kasich_words
 Presidential_stream = Stream(auth, PresidentialListener())
 Presidential_stream.filter(track=key_words)
-
 
 
 
