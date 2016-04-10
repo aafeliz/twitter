@@ -17,6 +17,9 @@ def sort_function(name):
 sort_function("Trump")
 print "Trump Complete"
 
+sort_function("Clinton")
+print "Clinton Complete"
+
 sort_function("Bernie")
 print "Bernie Complete"
 
