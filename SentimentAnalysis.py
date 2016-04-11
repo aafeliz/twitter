@@ -2,6 +2,7 @@
 from nltk import tokenize
 import nltk.data
 
+# READ ME
 '''
 - using pip install nltk
 - You need to download https://github.com/japerk/nltk-trainer repo
@@ -16,9 +17,7 @@ import nltk.data
 '''
 def bag_of_words(words):
     return dict([(word, True) for word in words])
-
 feats = bag_of_words(tokenize.word_tokenize("this works"))
-
 classifier = nltk.data.load('classifiers/movie_reviews_sklearn.LinearSVC.pickle')
 classed = classifier.classify(feats)
 print str(classed)
@@ -45,6 +44,16 @@ class analyzer:
         return dict([(word, True) for word in words])
 
 
-
-
+''' The following is an example of how the class works and can be utilized'''
+textAI = analyzer()
+# test whether it can reply to on sentence at a time
+print str(textAI.getSingleSentiment("this will return on result well"))
+# test whether it can collect many results into a list then spit them out to user
+textAI.classify("donald trump sucks")
+textAI.classify("all candicates plan to break the internate")
+textAI.classify("who will serve the people ?")
+textAI.classify("we live in a great country")
+textAI.classify("although some dont believe we do")
+textAI.classify("we live in a great country ,although some dont believe we do")
+print (textAI.getClassified())
 

@@ -1,1 +1,3 @@
 http://nealcaren.web.unc.edu/an-introduction-to-text-analysis-with-python-part-3/
+NLTK trainer doc: https://media.readthedocs.org/pdf/nltk-trainer/latest/nltk-trainer.pdf
+NLTK trainer repo: https://github.com/japerk/nltk-trainer

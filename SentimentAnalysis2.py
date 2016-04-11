@@ -1,11 +1,9 @@
-import re, math, collections, itertools
+import re, math
 import nltk, nltk.classify.util, nltk.metrics
 from nltk.classify import NaiveBayesClassifier
 from nltk import precision
 from nltk import recall
 
-from nltk.metrics import BigramAssocMeasures
-from nltk.probability import FreqDist, ConditionalFreqDist
 
 class predictor:
     def make_full_dict(self, words):
