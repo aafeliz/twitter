@@ -2,6 +2,8 @@
 from nltk import tokenize
 import nltk.data
 
+#nltk.download()
+
 # READ ME
 '''
 - using pip install nltk
@@ -24,8 +26,8 @@ print str(classed)
 '''
 
 class analyzer:
-    def __init__(self):
-        self.classifier = nltk.data.load('classifiers/movie_reviews_sklearn.LinearSVC.pickle')
+    def __init__(self, trainer = "classifiers/movie_reviews_sklearn.LinearSVC.pickle"):
+        self.classifier = nltk.data.load(trainer)#movie_reviews classifiers/movie_reviews_sklearn.DecisionTreeClassifier.pickle
         self.classified = []
     def classify(self, sentence):
         feats = self.bag_of_words(tokenize.word_tokenize(sentence))
@@ -38,22 +40,22 @@ class analyzer:
     def getClassified(self):
         return self.classified
 
-
-
     def bag_of_words(self, words):
         return dict([(word, True) for word in words])
 
+if __name__ == '__main__':
+    ''' The following is an example of how the class works and can be utilized'''
+    textAI = analyzer()
+    # test whether it can reply to on sentence at a time
+    print str(textAI.getSingleSentiment("this will return on result well"))
+    # test whether it can collect many results into a list then spit them out to user
+    textAI.classify("donald trump sucks")
+    textAI.classify("all candicates plan to break the internet")
+    textAI.classify("who will serve the people ?")
+    textAI.classify("we live in a great country")
+    textAI.classify("although some dont believe we do")
+    textAI.classify("")
+    textAI.classify("in foley square!! nyc come march with us")
 
-''' The following is an example of how the class works and can be utilized'''
-textAI = analyzer()
-# test whether it can reply to on sentence at a time
-print str(textAI.getSingleSentiment("this will return on result well"))
-# test whether it can collect many results into a list then spit them out to user
-textAI.classify("donald trump sucks")
-textAI.classify("all candicates plan to break the internate")
-textAI.classify("who will serve the people ?")
-textAI.classify("we live in a great country")
-textAI.classify("although some dont believe we do")
-textAI.classify("we live in a great country ,although some dont believe we do")
-print (textAI.getClassified())
+    print (textAI.getClassified())
 

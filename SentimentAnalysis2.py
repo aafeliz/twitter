@@ -64,5 +64,5 @@ class predictor:
 
 print 'using all words as features'
 analyser = predictor()
-prediction = analyser.test("its really bad")
+prediction = analyser.test("bad")
 print str(prediction)
