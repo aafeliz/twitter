@@ -1,0 +1,5 @@
+Presidents.py was run to obtain data for 24hrs. 
+
+First run Sorter_NoNull.py. This will give you files for each candidate titled Bernie_SortedFiltered.json, Trump_SortedFiltered.json for each candidate
+
+State_Count_ranking.py can be run to obtain the number of tweets from each candidate. We have to edit this file to check whether the message is positive before incrementing the count for each candidate in each state. 
