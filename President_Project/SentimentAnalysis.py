@@ -24,10 +24,17 @@ classifier = nltk.data.load('classifiers/movie_reviews_sklearn.LinearSVC.pickle'
 classed = classifier.classify(feats)
 print str(classed)
 '''
+trainer = {1: "classifiers/movie_reviews_sklearn.LinearSVC.pickle",                 # meh
+           2: "classifiers/movie_reviews_sklearn.DecisionTreeClassifier.pickle",    # terrible
+           3: "classifiers/movie_reviews_DecisionTree.pickle",                      # not good
+           4: "classifiers/movie_reviews_NaiveBayes.pickle",                        # meh
+           5: "classifiers/sentence_polarity_DecisionTree.pickle",                  # terrible
+           6: "classifiers/sentence_polarity_NaiveBayes.pickle",                    # The best so far
+           7: "classifiers/sentence_polarity_sklearn.LinearSVC.pickle"}             # this one is just as good
 
 class analyzer:
-    def __init__(self, trainer = "classifiers/movie_reviews_sklearn.LinearSVC.pickle"):
-        self.classifier = nltk.data.load(trainer)#movie_reviews classifiers/movie_reviews_sklearn.DecisionTreeClassifier.pickle
+    def __init__(self, t=7):
+        self.classifier = nltk.data.load(trainer[t])
         self.classified = []
     def classify(self, sentence):
         feats = self.bag_of_words(tokenize.word_tokenize(sentence))
@@ -47,14 +54,14 @@ if __name__ == '__main__':
     ''' The following is an example of how the class works and can be utilized'''
     textAI = analyzer()
     # test whether it can reply to on sentence at a time
-    print str(textAI.getSingleSentiment("this will return on result well"))
+    print str(textAI.getSingleSentiment("this one is working well"))
     # test whether it can collect many results into a list then spit them out to user
     textAI.classify("donald trump sucks")
     textAI.classify("all candicates plan to break the internet")
     textAI.classify("who will serve the people ?")
     textAI.classify("we live in a great country")
     textAI.classify("although some dont believe we do")
-    textAI.classify("")
+    textAI.classify("i really dont like the rest of the candidates")
     textAI.classify("in foley square!! nyc come march with us")
 
     print (textAI.getClassified())

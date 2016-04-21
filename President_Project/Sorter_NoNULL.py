@@ -64,6 +64,21 @@ def processTweet(tweet):
     tweet = re.sub('rt ', ' ', tweet)
     #Replace #word with word
     tweet = re.sub(r'#([^\s]+)', r'\1', tweet)
+    #removing names
+    tweet = re.sub('bernie', ' ', tweet)
+    tweet = re.sub('sanders', ' ', tweet)
+    tweet = re.sub('donald', ' ', tweet)
+    tweet = re.sub('trump', ' ', tweet)
+    tweet = re.sub('hillary', ' ', tweet)
+    tweet = re.sub('rodham', ' ', tweet)
+    tweet = re.sub('clinton', ' ', tweet)
+    tweet = re.sub('ted', ' ', tweet)
+    tweet = re.sub('cruz', ' ', tweet)
+    tweet = re.sub('john', ' ', tweet)
+    tweet = re.sub('kasich', ' ', tweet)
+    tweet = re.sub('santa', ' ', tweet)
+    tweet = re.sub('claus', ' ', tweet)
+
     #trim
     tweet = tweet.strip('\'"')
     return tweet

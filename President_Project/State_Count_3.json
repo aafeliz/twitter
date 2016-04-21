@@ -1,0 +1,315 @@
+Trump
+AK 90
+AL 1797
+AR 372
+AZ 2198
+CA 8801
+CO 764
+CT 1044
+DE 212
+FL 12385
+GA 2145
+HI 145
+IA 832
+ID 308
+IL 1401
+IN 1384
+KS 898
+KY 866
+LA 1307
+MA 1284
+MD 650
+ME 511
+MI 778
+MN 385
+MO 182
+MS 499
+MT 251
+NC 3303
+ND 53
+NE 3
+NH 422
+NJ 741
+NM 456
+NV 764
+NY 7406
+OH 1456
+OK 601
+OR 75
+PA 1529
+RI 70
+SC 1383
+SD 64
+TN 3120
+TX 3544
+UT 379
+VA 1471
+VT 131
+WA 4339
+WI 703
+WV 182
+WY 30
+
+
+Clinton
+AK 24
+AL 457
+AR 196
+AZ 1053
+CA 5585
+CO 558
+CT 548
+DE 160
+FL 3474
+GA 748
+HI 40
+IA 315
+ID 80
+IL 828
+IN 476
+KS 368
+KY 413
+LA 384
+MA 811
+MD 479
+ME 275
+MI 283
+MN 220
+MO 99
+MS 165
+MT 135
+NC 876
+ND 69
+NE 0
+NH 372
+NJ 387
+NM 295
+NV 354
+NY 4432
+OH 544
+OK 172
+OR 82
+PA 567
+RI 38
+SC 333
+SD 25
+TN 710
+TX 1165
+UT 137
+VA 398
+VT 151
+WA 2470
+WI 447
+WV 50
+WY 9
+
+
+Bernie
+AK 45
+AL 679
+AR 344
+AZ 1812
+CA 10885
+CO 1160
+CT 998
+DE 228
+FL 6821
+GA 1288
+HI 80
+IA 708
+ID 157
+IL 1782
+IN 803
+KS 643
+KY 673
+LA 778
+MA 1561
+MD 873
+ME 570
+MI 582
+MN 539
+MO 196
+MS 185
+MT 339
+NC 1836
+ND 129
+NE 3
+NH 556
+NJ 737
+NM 570
+NV 587
+NY 8053
+OH 901
+OK 263
+OR 200
+PA 1135
+RI 50
+SC 557
+SD 33
+TN 1176
+TX 2076
+UT 224
+VA 701
+VT 318
+WA 4293
+WI 848
+WV 113
+WY 7
+
+
+Cruz
+AK 32
+AL 1086
+AR 151
+AZ 1141
+CA 4152
+CO 369
+CT 311
+DE 110
+FL 6146
+GA 1052
+HI 65
+IA 412
+ID 164
+IL 606
+IN 617
+KS 432
+KY 419
+LA 566
+MA 512
+MD 359
+ME 234
+MI 421
+MN 242
+MO 68
+MS 323
+MT 192
+NC 1738
+ND 21
+NE 0
+NH 296
+NJ 411
+NM 235
+NV 335
+NY 2892
+OH 620
+OK 282
+OR 26
+PA 754
+RI 20
+SC 880
+SD 21
+TN 1446
+TX 2373
+UT 221
+VA 930
+VT 35
+WA 1816
+WI 345
+WV 97
+WY 58
+
+
+Kasich
+AK 2
+AL 87
+AR 17
+AZ 131
+CA 447
+CO 56
+CT 59
+DE 12
+FL 549
+GA 103
+HI 12
+IA 45
+ID 12
+IL 74
+IN 99
+KS 47
+KY 44
+LA 66
+MA 95
+MD 34
+ME 36
+MI 53
+MN 13
+MO 14
+MS 16
+MT 14
+NC 183
+ND 6
+NE 0
+NH 35
+NJ 51
+NM 25
+NV 44
+NY 506
+OH 187
+OK 21
+OR 2
+PA 87
+RI 6
+SC 137
+SD 2
+TN 147
+TX 192
+UT 35
+VA 80
+VT 4
+WA 362
+WI 47
+WV 11
+WY 0
+
+
+AK[('Trump', 90), ('Bernie', 45), ('Cruz', 32), ('Clinton', 24), ('Kasich', 2)]
+AL[('Trump', 1797), ('Cruz', 1086), ('Bernie', 679), ('Clinton', 457), ('Kasich', 87)]
+AR[('Trump', 372), ('Bernie', 344), ('Clinton', 196), ('Cruz', 151), ('Kasich', 17)]
+AZ[('Trump', 2198), ('Bernie', 1812), ('Cruz', 1141), ('Clinton', 1053), ('Kasich', 131)]
+CA[('Bernie', 10885), ('Trump', 8801), ('Clinton', 5585), ('Cruz', 4152), ('Kasich', 447)]
+CO[('Bernie', 1160), ('Trump', 764), ('Clinton', 558), ('Cruz', 369), ('Kasich', 56)]
+CT[('Trump', 1044), ('Bernie', 998), ('Clinton', 548), ('Cruz', 311), ('Kasich', 59)]
+DE[('Bernie', 228), ('Trump', 212), ('Clinton', 160), ('Cruz', 110), ('Kasich', 12)]
+FL[('Trump', 12385), ('Bernie', 6821), ('Cruz', 6146), ('Clinton', 3474), ('Kasich', 549)]
+GA[('Trump', 2145), ('Bernie', 1288), ('Cruz', 1052), ('Clinton', 748), ('Kasich', 103)]
+HI[('Trump', 145), ('Bernie', 80), ('Cruz', 65), ('Clinton', 40), ('Kasich', 12)]
+IA[('Trump', 832), ('Bernie', 708), ('Cruz', 412), ('Clinton', 315), ('Kasich', 45)]
+ID[('Trump', 308), ('Cruz', 164), ('Bernie', 157), ('Clinton', 80), ('Kasich', 12)]
+IL[('Bernie', 1782), ('Trump', 1401), ('Clinton', 828), ('Cruz', 606), ('Kasich', 74)]
+IN[('Trump', 1384), ('Bernie', 803), ('Cruz', 617), ('Clinton', 476), ('Kasich', 99)]
+KS[('Trump', 898), ('Bernie', 643), ('Cruz', 432), ('Clinton', 368), ('Kasich', 47)]
+KY[('Trump', 866), ('Bernie', 673), ('Cruz', 419), ('Clinton', 413), ('Kasich', 44)]
+LA[('Trump', 1307), ('Bernie', 778), ('Cruz', 566), ('Clinton', 384), ('Kasich', 66)]
+MA[('Bernie', 1561), ('Trump', 1284), ('Clinton', 811), ('Cruz', 512), ('Kasich', 95)]
+MD[('Bernie', 873), ('Trump', 650), ('Clinton', 479), ('Cruz', 359), ('Kasich', 34)]
+ME[('Bernie', 570), ('Trump', 511), ('Clinton', 275), ('Cruz', 234), ('Kasich', 36)]
+MI[('Trump', 778), ('Bernie', 582), ('Cruz', 421), ('Clinton', 283), ('Kasich', 53)]
+MN[('Bernie', 539), ('Trump', 385), ('Cruz', 242), ('Clinton', 220), ('Kasich', 13)]
+MO[('Bernie', 196), ('Trump', 182), ('Clinton', 99), ('Cruz', 68), ('Kasich', 14)]
+MS[('Trump', 499), ('Cruz', 323), ('Bernie', 185), ('Clinton', 165), ('Kasich', 16)]
+MT[('Bernie', 339), ('Trump', 251), ('Cruz', 192), ('Clinton', 135), ('Kasich', 14)]
+NC[('Trump', 3303), ('Bernie', 1836), ('Cruz', 1738), ('Clinton', 876), ('Kasich', 183)]
+ND[('Bernie', 129), ('Clinton', 69), ('Trump', 53), ('Cruz', 21), ('Kasich', 6)]
+NE[('Bernie', 3), ('Trump', 3), ('Clinton', 0), ('Kasich', 0), ('Cruz', 0)]
+NH[('Bernie', 556), ('Trump', 422), ('Clinton', 372), ('Cruz', 296), ('Kasich', 35)]
+NJ[('Trump', 741), ('Bernie', 737), ('Cruz', 411), ('Clinton', 387), ('Kasich', 51)]
+NM[('Bernie', 570), ('Trump', 456), ('Clinton', 295), ('Cruz', 235), ('Kasich', 25)]
+NV[('Trump', 764), ('Bernie', 587), ('Clinton', 354), ('Cruz', 335), ('Kasich', 44)]
+NY[('Bernie', 8053), ('Trump', 7406), ('Clinton', 4432), ('Cruz', 2892), ('Kasich', 506)]
+OH[('Trump', 1456), ('Bernie', 901), ('Cruz', 620), ('Clinton', 544), ('Kasich', 187)]
+OK[('Trump', 601), ('Cruz', 282), ('Bernie', 263), ('Clinton', 172), ('Kasich', 21)]
+OR[('Bernie', 200), ('Clinton', 82), ('Trump', 75), ('Cruz', 26), ('Kasich', 2)]
+PA[('Trump', 1529), ('Bernie', 1135), ('Cruz', 754), ('Clinton', 567), ('Kasich', 87)]
+RI[('Trump', 70), ('Bernie', 50), ('Clinton', 38), ('Cruz', 20), ('Kasich', 6)]
+SC[('Trump', 1383), ('Cruz', 880), ('Bernie', 557), ('Clinton', 333), ('Kasich', 137)]
+SD[('Trump', 64), ('Bernie', 33), ('Clinton', 25), ('Cruz', 21), ('Kasich', 2)]
+TN[('Trump', 3120), ('Cruz', 1446), ('Bernie', 1176), ('Clinton', 710), ('Kasich', 147)]
+TX[('Trump', 3544), ('Cruz', 2373), ('Bernie', 2076), ('Clinton', 1165), ('Kasich', 192)]
+UT[('Trump', 379), ('Bernie', 224), ('Cruz', 221), ('Clinton', 137), ('Kasich', 35)]
+VA[('Trump', 1471), ('Cruz', 930), ('Bernie', 701), ('Clinton', 398), ('Kasich', 80)]
+VT[('Bernie', 318), ('Clinton', 151), ('Trump', 131), ('Cruz', 35), ('Kasich', 4)]
+WA[('Trump', 4339), ('Bernie', 4293), ('Clinton', 2470), ('Cruz', 1816), ('Kasich', 362)]
+WI[('Bernie', 848), ('Trump', 703), ('Clinton', 447), ('Cruz', 345), ('Kasich', 47)]
+WV[('Trump', 182), ('Bernie', 113), ('Cruz', 97), ('Clinton', 50), ('Kasich', 11)]
+WY[('Cruz', 58), ('Trump', 30), ('Clinton', 9), ('Bernie', 7), ('Kasich', 0)]
