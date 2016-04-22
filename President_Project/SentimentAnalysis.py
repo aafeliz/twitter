@@ -33,7 +33,7 @@ trainer = {1: "classifiers/movie_reviews_sklearn.LinearSVC.pickle",             
            7: "classifiers/sentence_polarity_sklearn.LinearSVC.pickle"}             # this one is just as good
 
 class analyzer:
-    def __init__(self, t=7):
+    def __init__(self, t=4):
         self.classifier = nltk.data.load(trainer[t])
         self.classified = []
     def classify(self, sentence):
