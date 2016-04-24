@@ -1,7 +1,7 @@
 
 from nltk import tokenize
 import nltk.data
-
+import urllib as url
 #nltk.download()
 
 # READ ME
@@ -33,7 +33,7 @@ trainer = {1: "classifiers/movie_reviews_sklearn.LinearSVC.pickle",             
            7: "classifiers/sentence_polarity_sklearn.LinearSVC.pickle"}             # this one is just as good
 
 class analyzer:
-    def __init__(self, t=4):
+    def __init__(self, t=6):
         self.classifier = nltk.data.load(trainer[t])
         self.classified = []
     def classify(self, sentence):
@@ -46,6 +46,18 @@ class analyzer:
 
     def getClassified(self):
         return self.classified
+
+    def getSingleSentiment2(self, sentence):   #slow sentiment analysis
+        data = url.urlencode({"text": sentence})
+        u = url.urlopen("http://text-processing.com/api/sentiment/", data)
+        the_page = u.read()
+        print(str(the_page))
+        if "\"label\": \"pos\"" in the_page:
+            return "pos"
+        elif "\"label\": \"neg\"" in the_page:
+            return "neg"
+        elif "\"label\": \"neutral\"" in the_page:
+            return "pos"
 
     def bag_of_words(self, words):
         return dict([(word, True) for word in words])

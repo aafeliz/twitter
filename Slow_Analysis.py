@@ -22,7 +22,7 @@ def processTweet(tweet):
 
 
 #Read the tweets one by one and process it
-fp = open('Kasich_Sorted.json', 'r')
+fp = open('President_Project/Kasich_SortedFiltered.json', 'r')
 line = fp.readline()
 pos_count = neg_count = neutral_count = 0
 
@@ -31,8 +31,8 @@ while line:
     #print processedTweet
     data = urllib.urlencode({"text": processTweet(line)})
     u = urllib.urlopen("http://text-processing.com/api/sentiment/", data)
-    the_page = u.read()   
-    #print the_page
+    the_page = u.read()
+    #print(str(the_page))
     if "\"label\": \"pos\"" in the_page:
         pos_count += 1
     elif "\"label\": \"neg\"" in the_page:
