@@ -50,7 +50,7 @@ colors = {'Trump': (0.0, 0.0, 0.0), 'Cruz': (0.0, 0.0, 1.0), 'Kasich': (0.75, 0,
           'Clinton': (1.0, 0.0, 0.0),
           'Berney': (0.75, 0.75, 0)}
 colors2 = {'Trump': plotC['firebrick'], 'Cruz': plotC['rosybrown'], 'Kasich': plotC['darkred'], 'Clinton': plotC['blueviolet'],
-           'Berney': plotC['skyblue']}
+           'Berney': plotC['skyblue'], 'none': plotC['black']}
 
 # create the map
 map = Basemap(llcrnrlon=-119,llcrnrlat=22,urcrnrlon=-64,urcrnrlat=49,
@@ -230,6 +230,10 @@ for j, k in repVSdemo2.items():
     elif k[4] > k[0] and k[4] > k[1] and k[4] > k[2] and k[4] > k[3]:
         poly = Polygon(seg[i], facecolor=colors2['Berney'], edgecolor=colors2['Berney'])
         ax.add_patch(poly)
+    else:
+        poly = Polygon(seg[i], facecolor=colors2['none'], edgecolor=colors2['none'])
+        ax.add_patch(poly)
+
     i += 1
 
 
