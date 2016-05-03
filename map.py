@@ -44,7 +44,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.basemap import Basemap
 from matplotlib.patches import Polygon
 from matplotlibColors import cnames as plotC
-fileName = "President_Project/State_Count_3.json"
+fileName = "President_Project/State_Count_slow.json"
 
 colors = {'Trump': (0.0, 0.0, 0.0), 'Cruz': (0.0, 0.0, 1.0), 'Kasich': (0.75, 0, 0.75),
           'Clinton': (1.0, 0.0, 0.0),
